@@ -145,3 +145,12 @@ addBtn.addEventListener('click', function() {
 
 // Open the database on page load
 document.addEventListener('DOMContentLoaded', openDatabase);
+
+// Handle theme changes
+const themeButtons = document.querySelectorAll('.theme-btn');
+themeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const theme = this.getAttribute('data-theme');
+        document.body.className = theme;
+    });
+});

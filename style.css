@@ -104,13 +104,13 @@ tfoot td {
     gap: 15px;
   }
 
-  .input-section label, .input-section input, .input-section button {
+  .input-section label, .input-section input{
     flex-basis: 48%; /* Keep half-width inputs on medium screens */
     max-width: 100%;
   }
 
   .input-section button {
-    flex-basis: 100%; /* Full-width button on smaller screens */
+    margin: 0 auto;/* Full-width button on smaller screens */
   }
 }
 
@@ -126,13 +126,15 @@ tfoot td {
   .input-section label,
   .input-section input[type="string"],
   .input-section input[type="number"],
-  .input-section input[type="date"],
-  .input-section button {
+  .input-section input[type="date"]{
     width: 100%;
     margin-bottom: 10px; /* Keep spacing consistent */
     height: 30px; /* Smaller height for inputs */
     font-size: 14px; /* Adjust font size for readability */
     max-width: none; /* Remove max-width for small screens */
+  }
+  .input-section button{
+    margin: 0 auto;
   }
 
   table {
@@ -166,14 +168,16 @@ tfoot td {
 
   .input-section input[type="string"],
   .input-section input[type="number"],
-  .input-section input[type="date"],
-  .input-section button {
+  .input-section input[type="date"]{
     width: 100%;
     padding: 8px; /* Adjust padding for smaller screens */
     margin-bottom: 10px; /* Keep spacing consistent */
     height: 30px; /* Even smaller height for inputs */
     font-size: 13px; /* Adjust font size for better fit */
     max-width: none; /* Remove max-width for extra small screens */
+  }
+  .input-section button{
+    margin: 0 auto;
   }
 
   table {

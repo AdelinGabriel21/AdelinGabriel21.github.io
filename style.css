@@ -137,7 +137,7 @@ tfoot td {
 
   table {
     margin-top: 20px; /* Add space above table */
-    padding: 15px auto; /* Add horizontal padding for small screens */
+    padding: 15px 15px; /* Add horizontal padding for small screens */
   }
 
   th, td {
@@ -179,7 +179,7 @@ tfoot td {
 
   table {
     margin: 10px 0; /* Adjust margin for extra small screens */
-    padding: 10px auto; /* Add horizontal padding for extra small screens */
+    padding: 10px 10px; /* Add horizontal padding for extra small screens */
   }
 
   th, td {

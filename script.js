@@ -1,6 +1,7 @@
 let expenses = [];
 let totalAmount = 0;
 
+const colorThemes = document.querySelectorAll('[name="theme"]');
 const categorySelect = document.getElementById('category-select');
 const descriptionInput = document.getElementById('description-input');
 const amountInput = document.getElementById('amount-input');
@@ -8,6 +9,33 @@ const dateInput = document.getElementById('date-input');
 const addBtn = document.getElementById('add-btn');
 const expensesTableBody = document.getElementById('expnese-table-body');
 const totalAmountCell = document.getElementById('total-amount');
+
+// store theme
+const storeTheme = function (theme) {
+    localStorage.setItem("theme", theme);
+  };
+
+// set theme when visitor returns
+const setTheme = function () {
+    const activeTheme = localStorage.getItem("theme");
+    colorThemes.forEach((themeOption) => {
+      if (themeOption.id === activeTheme) {
+        themeOption.checked = true;
+      }
+    });
+    // fallback for no :has() support
+    document.documentElement.className = activeTheme;
+  };
+  
+  colorThemes.forEach((themeOption) => {
+    themeOption.addEventListener("click", () => {
+      storeTheme(themeOption.id);
+      // fallback for no :has() support
+      document.documentElement.className = themeOption.id;
+    });
+  });
+  
+  document.onload = setTheme();
 
 // Load expenses from LocalStorage on page load
 document.addEventListener('DOMContentLoaded', function() {

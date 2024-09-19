@@ -70,7 +70,7 @@ table {
   width: calc(100% - 20px); /* Full width minus padding */
   margin: 20px auto; /* Center table with spacing on top and bottom */
   border-collapse: collapse;
-  padding: 0 10px; /* Add horizontal padding */
+  padding: 10px auto; /* Add horizontal padding */
 }
 
 th, td {
@@ -137,7 +137,7 @@ tfoot td {
 
   table {
     margin-top: 20px; /* Add space above table */
-    padding: 0 15px; /* Add horizontal padding for small screens */
+    padding: 15px auto; /* Add horizontal padding for small screens */
   }
 
   th, td {
@@ -179,7 +179,7 @@ tfoot td {
 
   table {
     margin: 10px 0; /* Adjust margin for extra small screens */
-    padding: 0 10px; /* Add horizontal padding for extra small screens */
+    padding: 10px auto; /* Add horizontal padding for extra small screens */
   }
 
   th, td {
@@ -220,8 +220,8 @@ tfoot td {
   outline: 3px solid var(--radio-color, currentColor);
   outline-offset: 3px;
   border-radius: 50%;
-  min-width: 10px;
-  min-height: 10px;
+  min-width: 20px;
+  min-height: 20px;
   margin: 5px;
 }
 
